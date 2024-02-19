@@ -1,0 +1,109 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2758
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Bold;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red252\green95\blue163;\red31\green31\blue36;\red255\green255\blue255;
+\red93\green216\blue255;\red208\green168\blue255;\red208\green168\blue255;\red252\green106\blue93;\red65\green161\blue192;
+\red161\green103\blue230;\red161\green103\blue230;\red103\green183\blue164;\red208\green191\blue105;\red158\green241\blue221;
+}
+{\*\expandedcolortbl;;\csgenericrgb\c98839\c37355\c63833;\csgenericrgb\c12054\c12284\c14131;\csgenericrgb\c100000\c100000\c100000\c85000;
+\csgenericrgb\c36295\c84643\c99897;\csgenericrgb\c81569\c65882\c100000;\csgenericrgb\c81681\c65692\c99927;\csgenericrgb\c98912\c41558\c36568;\csgenericrgb\c25490\c63137\c75294;
+\csgenericrgb\c63137\c40392\c90196;\csgenericrgb\c63232\c40219\c90115;\csgenericrgb\c40538\c71705\c64209;\csgenericrgb\c81498\c74939\c41233;\csgenericrgb\c62145\c94386\c86819;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab593
+\pard\tx593\pardeftab593\partightenfactor0
+
+\f0\b\fs24 \cf2 \cb3 import
+\f1\b0 \cf4  SwiftUI\
+\
+
+\f0\b \cf2 struct
+\f1\b0 \cf4  \cf5 ProfileEdit\cf4 : \cf6 View\cf4  \{\
+    \
+    \cf7 @AppStorage\cf4 (\cf8 "fname"\cf4 ) 
+\f0\b \cf2 var
+\f1\b0 \cf4  \cf9 fname\cf4 : \cf7 String\cf4  = \cf8 ""\cf4 \
+    \cf7 @AppStorage\cf4 (\cf8 "lname"\cf4 ) 
+\f0\b \cf2 var
+\f1\b0 \cf4  \cf9 lname\cf4 : \cf7 String\cf4  = \cf8 ""\cf4 \
+    \cf7 @AppStorage\cf4 (\cf8 "email"\cf4 ) 
+\f0\b \cf2 var
+\f1\b0 \cf4  \cf9 email\cf4 : \cf7 String\cf4  = \cf8 ""\cf4 \
+    \cf7 @AppStorage\cf4 (\cf8 "city"\cf4 ) 
+\f0\b \cf2 var
+\f1\b0 \cf4  \cf9 city\cf4 : \cf7 String\cf4  = \cf8 ""\cf4 \
+    \cf7 @AppStorage\cf4 (\cf8 "alert"\cf4 ) 
+\f0\b \cf2 var
+\f1\b0 \cf4  \cf9 alert\cf4 : \cf7 String\cf4  = \cf8 ""\cf4 \
+    \
+    
+\f0\b \cf2 var
+\f1\b0 \cf4  \cf9 body\cf4 : 
+\f0\b \cf2 some
+\f1\b0 \cf4  \cf6 View\cf4  \{\
+            \cf7 VStack\cf4 \{\
+                \cf7 Text\cf4 (\cf8 "Edit your profile"\cf4 )\
+                \cf7 HStack\cf4  \{\
+                    \cf7 Text\cf4 (\cf8 "First Name: "\cf4 ).\cf10 foregroundColor\cf4 (.\cf11 white\cf4 )\
+                    \cf7 TextField\cf4 (\cf8 " first name..."\cf4 , \cf10 text\cf4 : \cf12 $fname\cf4 ).\cf10 background\cf4 (\cf7 Color\cf4 .\cf11 black\cf4 ).\cf10 border\cf4 (\cf7 Color\cf4 .\cf11 white\cf4 )\
+                        .\cf10 cornerRadius\cf4 (\cf13 4\cf4 )\
+                        .\cf10 foregroundColor\cf4 (.\cf11 white\cf4 )\
+                \}\
+                \cf7 HStack\cf4  \{\
+                    \cf7 Text\cf4 (\cf8 "Last Name: "\cf4 ).\cf10 foregroundColor\cf4 (.\cf11 white\cf4 )\
+                    \cf7 TextField\cf4 (\cf8 " last name..."\cf4 , \cf10 text\cf4 : \cf12 $lname\cf4 ).\cf10 background\cf4 (\cf7 Color\cf4 .\cf11 black\cf4 ).\cf10 border\cf4 (\cf7 Color\cf4 .\cf11 white\cf4 )\
+                        .\cf10 cornerRadius\cf4 (\cf13 4\cf4 )\
+                        .\cf10 foregroundColor\cf4 (.\cf11 white\cf4 )\
+                \}\
+                \cf7 HStack\cf4  \{\
+                    \cf7 Text\cf4 (\cf8 "City: "\cf4 ).\cf10 foregroundColor\cf4 (.\cf11 white\cf4 )\
+                    \cf7 TextField\cf4 (\cf8 " city..."\cf4 , \cf10 text\cf4 : \cf12 $city\cf4 ).\cf10 background\cf4 (\cf7 Color\cf4 .\cf11 black\cf4 ).\cf10 border\cf4 (\cf7 Color\cf4 .\cf11 white\cf4 )\
+                        .\cf10 cornerRadius\cf4 (\cf13 4\cf4 )\
+                        .\cf10 foregroundColor\cf4 (.\cf11 white\cf4 )\
+                \}\
+                \cf7 HStack\cf4  \{\
+                    \cf7 Text\cf4 (\cf8 "Email: "\cf4 ).\cf10 foregroundColor\cf4 (.\cf11 white\cf4 )\
+                    \cf7 TextField\cf4 (\cf8 " email..."\cf4 , \cf10 text\cf4 : \cf12 $email\cf4 ).\cf10 background\cf4 (\cf7 Color\cf4 .\cf11 black\cf4 ).\cf10 border\cf4 (\cf7 Color\cf4 .\cf11 white\cf4 )\
+                        .\cf10 cornerRadius\cf4 (\cf13 4\cf4 ).\cf10 autocapitalization\cf4 (.\cf11 none\cf4 ).\cf10 foregroundColor\cf4 (.\cf11 white\cf4 )\
+                \}\
+                \cf7 Button\cf4 (\cf8 "Save"\cf4 ) \{\
+                    
+\f0\b \cf2 if
+\f1\b0 \cf4 (\cf12 fname\cf4  != \cf8 ""\cf4 )\{\
+                        \cf12 fname\cf4  = \cf12 fname\cf4 \
+                    \}\
+                    
+\f0\b \cf2 if
+\f1\b0 \cf4 (\cf12 lname\cf4  != \cf8 ""\cf4 )\{\
+                        \cf12 lname\cf4  = \cf12 lname\cf4 \
+                    \}\
+                    
+\f0\b \cf2 if
+\f1\b0 \cf4 (\cf12 city\cf4  != \cf8 ""\cf4 )\{\
+                        \cf12 city\cf4  = \cf12 city\cf4 \
+                    \}\
+                    
+\f0\b \cf2 if
+\f1\b0 \cf4 (\cf12 email\cf4  != \cf8 ""\cf4 )\{\
+                        \cf12 email\cf4  = \cf12 email\cf4 \
+                    \}\
+                    
+\f0\b \cf2 if
+\f1\b0 \cf4 ((\cf12 fname\cf4  != \cf8 ""\cf4 )&&(\cf12 lname\cf4  != \cf8 ""\cf4 )&&(\cf12 city\cf4  != \cf8 ""\cf4 )&&(\cf12 email\cf4  != \cf8 ""\cf4 ))\{\
+                        \cf12 alert\cf4 =\cf8 ""\cf4 \}\
+                    
+\f0\b \cf2 else
+\f1\b0 \cf4 \{\
+                        \cf12 alert\cf4  = \cf8 "Please complete all fields!"\cf4 \
+                    \}\
+                \}\
+                \cf7 Text\cf4 (\cf8 "\cf4 \\(\cf12 alert\cf4 )\cf8 "\cf4 ).\cf10 foregroundColor\cf4 (.\cf11 white\cf4 )\
+        \}.\cf10 background\cf4 (\cf7 Color\cf4 .\cf11 black\cf4 )\
+            .\cf10 padding\cf4 ()\
+            .\cf10 foregroundColor\cf4 (.\cf11 white\cf4 )\
+    \}\
+\}\
+\
+\cf10 #Preview\cf4  \{\
+    \cf14 ProfileEdit\cf4 ()\
+\}\
+}
